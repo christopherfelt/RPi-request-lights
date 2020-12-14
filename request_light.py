@@ -13,7 +13,9 @@ ec2 = os.getenv("LIGHT_EC2")
 # gpio.setup(red_pin, gpio.OUT)
 
 def get_lights():
+    
     r = requests.get(ec2)
+    print(r.status_code)
     r_json = r.json()
     blue = r_json[1]['active']
     red = r_json[2]['active']
