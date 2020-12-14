@@ -22,18 +22,19 @@ def get_lights():
 
     if(blue):
         print("Blue is active")
-        # gpio.output(blue_pin, gpio.HIGH)
+        gpio.output(blue_pin, gpio.HIGH)
     else:
         print("Blue is inactive")
+        gpio.output(blue_pin, gpio.LOW)
+
 
     if(red):
         print("Red is active")
-        # gpio.output(red_pin, gpio.HIGH)
+        gpio.output(red_pin, gpio.HIGH)
     else:
         print("Red is inactive")
+        gpio.output(blue_pin, gpio.LOW)
 
-
-    print(blue, red, green, yellow)
 
 
 
