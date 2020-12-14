@@ -4,13 +4,13 @@ import RPi.GPIO as gpio
 
 ec2 = os.getenv("LIGHT_EC2")
 
-# blue_pin = 23
-# red_pin = 24
+blue_pin = 23
+red_pin = 24
 
 
-# gpio.setmode(gpio.BCM)
-# gpio.setup(blue_pin, gpio.OUT)
-# gpio.setup(red_pin, gpio.OUT)
+gpio.setmode(gpio.BCM)
+gpio.setup(blue_pin, gpio.OUT)
+gpio.setup(red_pin, gpio.OUT)
 
 def get_lights():
     
