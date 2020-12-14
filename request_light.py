@@ -1,6 +1,6 @@
 import requests
 import os
-# import Rpi.GPIO as gpio
+import Rpi.GPIO as gpio
 
 ec2 = os.getenv("LIGHT_EC2")
 
