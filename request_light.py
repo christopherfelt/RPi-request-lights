@@ -41,7 +41,7 @@ def get_lights():
 
     time.sleep(3)
 
-    GPIO.cleanup()  
+    gpio.cleanup()  
 
 
 
