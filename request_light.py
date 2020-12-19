@@ -7,11 +7,15 @@ ec2 = os.getenv("LIGHT_EC2")
 
 blue_pin = 23
 red_pin = 24
+green_pin = 5
+yellow_pin = 6
 
 
 gpio.setmode(gpio.BCM)
 gpio.setup(blue_pin, gpio.OUT)
 gpio.setup(red_pin, gpio.OUT)
+gpio.setup(green_pin, gpio.OUT)
+gpio.setup(yellow_pin, gpio.OUT)
 
 def get_lights():
     
@@ -36,8 +40,21 @@ def get_lights():
         gpio.output(red_pin, gpio.HIGH)
     else:
         print("Red is inactive")
-        gpio.output(blue_pin, gpio.LOW)
+        gpio.output(red_pin, gpio.LOW)
 
+    if(green):
+        print("green is active")
+        gpio.output(green_pin, gpio.HIGH)
+    else:
+        print("green is inactive")
+        gpio.output(green_pin, gpio.LOW)
+
+    if(yellow):
+        print("yellow is active")
+        gpio.output(yellow_pin, gpio.HIGH)
+    else:
+        print("yellow is inactive")
+        gpio.output(yellow_pin, gpio.LOW)
 
     time.sleep(3)
 
