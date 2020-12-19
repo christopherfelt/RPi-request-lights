@@ -1,6 +1,7 @@
 import requests
 import os
 import RPi.GPIO as gpio
+import time
 
 ec2 = os.getenv("LIGHT_EC2")
 
@@ -36,6 +37,11 @@ def get_lights():
     else:
         print("Red is inactive")
         gpio.output(blue_pin, gpio.LOW)
+
+
+    time.sleep(3)
+
+    GPIO.cleanup()  
 
 
 
